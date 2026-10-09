@@ -44,9 +44,17 @@ h2 { font-size: 1.55rem; font-weight: 600; }
 .summary { padding: 1rem 1.3rem; background: var(--card); border-left: 3px solid var(--accent); margin-block: 1.8rem; }
 .summary p { margin: .3rem 0; }
 code { font-size: .9em; overflow-wrap: anywhere; }
+.feature { margin: 1.5rem 0; }
+.feature img { display: block; width: 100%; height: auto; border-radius: .25rem; }
+.feature figcaption { margin-top: .6rem; font-size: .78rem; line-height: 1.55; color: var(--muted); }
+.section-nav { padding-block: .8rem; border-block: 1px solid var(--line); }
+.intent { margin: 1.5rem 0; padding: 1rem 1.3rem; border-left: 3px solid var(--accent); background: var(--card); }
+.intent p { margin: 0; }
+.policy h3 { margin-top: 1.8rem; font-size: 1.1rem; line-height: 1.45; }
+.policy section { scroll-margin-top: 1.5rem; }
 @media (max-width: 42rem) {
   .wrap { width: min(100% - 2rem, 68rem); }
-  .site-header { padding-block: 1.3rem; gap: 1rem; }
+  .site-header { padding-block: 1.3rem; gap: 1rem; flex-wrap: wrap; }
   nav { gap: 1rem; }
   .intro { padding-block: 2.8rem 1.8rem; }
   .app-grid { grid-template-columns: 1fr; }
