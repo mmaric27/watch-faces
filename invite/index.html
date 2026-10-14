@@ -35,6 +35,10 @@
                   <td style="padding:22px 24px; background-color:#fff4d8; border-left:6px solid #b66a08; border-radius:0 8px 8px 0; color:#302510;">
                     <h2 style="margin:0 0 12px; font-size:24px; line-height:31px; font-weight:700; color:#503407;">Don’t have a compatible watch?</h2>
                     <p style="margin:0; font-size:17px; line-height:28px; font-weight:600;">Please forward this invitation to someone who does, or share it with a relevant community. You don’t need to join the group just to help spread the word.</p>
+                    <p style="margin:16px 0 6px; font-size:14px; line-height:22px; font-weight:700;">Share this invitation:</p>
+                    <p style="margin:0 0 12px; font-size:14px; line-height:22px; overflow-wrap:anywhere;"><a id="invitation-link" href="https://mmaric27.github.io/watch-faces/invite/" style="color:#265b63; text-decoration:underline;">https://mmaric27.github.io/watch-faces/invite/</a></p>
+                    <button id="copy-invitation-link" type="button" hidden style="padding:11px 18px; border:1px solid #214b50; border-radius:6px; background-color:#214b50; color:#ffffff; font:700 15px/22px Arial, Helvetica, sans-serif; cursor:pointer;">Copy link</button>
+                    <p id="copy-link-status" role="status" aria-live="polite" style="margin:10px 0 0; font-size:13px; line-height:20px;"></p>
                   </td>
                 </tr>
               </table>
@@ -90,5 +94,33 @@
       </td>
     </tr>
   </table>
+  <script>
+    (() => {
+      const link = document.getElementById('invitation-link');
+      const button = document.getElementById('copy-invitation-link');
+      const status = document.getElementById('copy-link-status');
+      if (!link || !button || !status) return;
+      button.hidden = false;
+      button.addEventListener('click', async () => {
+        button.disabled = true;
+        try {
+          await navigator.clipboard.writeText(link.href);
+          status.textContent = 'Link copied. Paste it into an email, message or post.';
+        } catch {
+          status.textContent = 'Automatic copying is unavailable. Select and copy the link above.';
+          link.focus();
+          const selection = window.getSelection();
+          if (selection) {
+            const range = document.createRange();
+            range.selectNodeContents(link);
+            selection.removeAllRanges();
+            selection.addRange(range);
+          }
+        } finally {
+          button.disabled = false;
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
