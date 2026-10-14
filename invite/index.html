@@ -8,6 +8,11 @@
   <link rel="canonical" href="https://mmaric27.github.io/watch-faces/invite/">
   <title>Wear OS testers wanted: Lento &amp; Lento Classic</title>
   <style>
+    .design-strip { display:flex; gap:14px; max-width:100%; overflow-x:auto; padding:4px 0 14px; margin:0 0 24px; scroll-snap-type:x proximity; }
+    .design-strip figure { flex:0 0 210px; margin:0; scroll-snap-align:start; }
+    .design-strip img { display:block; width:100%; height:auto; border-radius:8px; }
+    .design-strip figcaption { padding-top:8px; color:#53606c; font-size:13px; line-height:20px; }
+    .design-strip a:focus-visible { outline:3px solid #b66a08; outline-offset:3px; }
     @media only screen and (max-width:540px) {
       .face-card { display:block !important; width:100% !important; padding:0 0 16px !important; box-sizing:border-box; }
       .message-content { padding-left:20px !important; padding-right:20px !important; }
@@ -18,7 +23,7 @@
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%; background-color:#f3f4f6;">
     <tr>
       <td align="center" style="padding:28px 12px;">
-        <table role="presentation" width="680" cellspacing="0" cellpadding="0" border="0" style="width:100%; max-width:680px; background-color:#ffffff; border:1px solid #e1e5e9; border-radius:12px;">
+        <table role="presentation" width="680" cellspacing="0" cellpadding="0" border="0" style="width:100%; max-width:680px; table-layout:fixed; background-color:#ffffff; border:1px solid #e1e5e9; border-radius:12px;">
           <tr>
             <td style="padding:28px 28px 20px; border-bottom:1px solid #e8ebee;">
               <p style="margin:0 0 8px; color:#66717d; font-size:12px; line-height:18px; letter-spacing:1.4px; text-transform:uppercase;">An invitation to try two watch faces</p>
@@ -66,10 +71,11 @@
                 </tr>
               </table>
 
+              <p style="margin:0 0 22px;"><a href="#design-options" style="color:#265b63; text-decoration:underline;">Explore more designs and materials</a></p>
               <p style="margin:0 0 18px;">For the test, please aim to keep both apps installed on your watch and remain opted in to both closed tests for at least 14 consecutive days. Try their features and share honest feedback.</p>
               <p style="margin:0 0 24px;">Neither needs to stay your active watch face throughout those 14 days. You can return to your usual face after trying them, including if these designs are not to your taste.</p>
 
-              <p style="margin:0 0 12px; font-weight:700;">Request membership in the testers’ group:</p>
+              <p id="join" style="margin:0 0 12px; font-weight:700;">Request membership in the testers’ group:</p>
               <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 12px;">
                 <tr>
                   <td bgcolor="#214b50" style="border-radius:6px;">
@@ -86,6 +92,29 @@
               <p style="margin:0 0 6px; font-weight:700;">Testing details and privacy:</p>
               <p style="margin:0 0 26px; overflow-wrap:anywhere; word-break:break-word;"><a href="https://mmaric27.github.io/watch-faces/testing/" style="color:#265b63; text-decoration:underline;">https://mmaric27.github.io/watch-faces/testing/</a></p>
 
+              <section id="design-options" aria-labelledby="design-options-title" style="margin:30px 0; padding-top:24px; border-top:1px solid #e1e5e9;">
+                <h2 id="design-options-title" style="margin:0 0 12px; color:#17232d; font-size:24px; line-height:31px;">Find a design that feels like you</h2>
+                <p style="margin:0 0 12px;">Each app includes 20 coordinated designs, from porcelain and mother of pearl to colourful stone textures and darker finishes.</p>
+                <p style="margin:0 0 22px; color:#53606c; font-size:14px; line-height:22px;">Swipe or scroll sideways through each collection. Select a panel for a larger image in a new tab.</p>
+                <h3 style="margin:0 0 10px; color:#17232d; font-size:20px; line-height:28px;">Lento: one hand, 24 hours</h3>
+                <div class="design-strip" role="list" aria-label="Lento design collection">
+                  <figure role="listitem"><a href="lento-designs-02.jpg" target="_blank" rel="noopener noreferrer"><img src="lento-designs-02.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="Lento: Porcelain, Cream, Mother of Pearl and Silver Guilloche. Open larger panel."></a><figcaption>Porcelain, Cream, Mother of Pearl and Silver Guilloche</figcaption></figure>
+                  <figure role="listitem"><a href="lento-designs-03.jpg" target="_blank" rel="noopener noreferrer"><img src="lento-designs-03.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="Lento: Ice Blue, Turquoise, Meteorite and Burnt Orange. Open larger panel."></a><figcaption>Ice Blue, Turquoise, Meteorite and Burnt Orange</figcaption></figure>
+                  <figure role="listitem"><a href="lento-designs-04.jpg" target="_blank" rel="noopener noreferrer"><img src="lento-designs-04.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="Lento: Muted Olive, Tiger Eye, Slate Gray and Malachite. Open larger panel."></a><figcaption>Muted Olive, Tiger Eye, Slate Gray and Malachite</figcaption></figure>
+                  <figure role="listitem"><a href="lento-designs-05.jpg" target="_blank" rel="noopener noreferrer"><img src="lento-designs-05.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="Lento: Espresso, Black, Burgundy and Lapis Lazuli. Open larger panel."></a><figcaption>Espresso, Black, Burgundy and Lapis Lazuli</figcaption></figure>
+                  <figure role="listitem"><a href="lento-designs-06.jpg" target="_blank" rel="noopener noreferrer"><img src="lento-designs-06.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="Lento: Navy, Burgundy Urushi, Blue Aventurine and Black Marble. Open larger panel."></a><figcaption>Navy, Burgundy Urushi, Blue Aventurine and Black Marble</figcaption></figure>
+                </div>
+                <h3 style="margin:0 0 10px; color:#17232d; font-size:20px; line-height:28px;">Lento Classic: a 12-hour analog dial</h3>
+                <div class="design-strip" role="list" aria-label="Lento Classic design collection">
+                  <figure role="listitem"><a href="lento-classic-designs-02.jpg" target="_blank" rel="noopener noreferrer"><img src="lento-classic-designs-02.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="Lento Classic: Porcelain, Cream, Mother of Pearl and Silver Guilloche. Open larger panel."></a><figcaption>Porcelain, Cream, Mother of Pearl and Silver Guilloche</figcaption></figure>
+                  <figure role="listitem"><a href="lento-classic-designs-03.jpg" target="_blank" rel="noopener noreferrer"><img src="lento-classic-designs-03.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="Lento Classic: Ice Blue, Turquoise, Meteorite and Burnt Orange. Open larger panel."></a><figcaption>Ice Blue, Turquoise, Meteorite and Burnt Orange</figcaption></figure>
+                  <figure role="listitem"><a href="lento-classic-designs-04.jpg" target="_blank" rel="noopener noreferrer"><img src="lento-classic-designs-04.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="Lento Classic: Muted Olive, Tiger Eye, Slate Gray and Malachite. Open larger panel."></a><figcaption>Muted Olive, Tiger Eye, Slate Gray and Malachite</figcaption></figure>
+                  <figure role="listitem"><a href="lento-classic-designs-05.jpg" target="_blank" rel="noopener noreferrer"><img src="lento-classic-designs-05.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="Lento Classic: Espresso, Black, Burgundy and Lapis Lazuli. Open larger panel."></a><figcaption>Espresso, Black, Burgundy and Lapis Lazuli</figcaption></figure>
+                  <figure role="listitem"><a href="lento-classic-designs-06.jpg" target="_blank" rel="noopener noreferrer"><img src="lento-classic-designs-06.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="Lento Classic: Navy, Burgundy Urushi, Blue Aventurine and Black Marble. Open larger panel."></a><figcaption>Navy, Burgundy Urushi, Blue Aventurine and Black Marble</figcaption></figure>
+                </div>
+                <p style="margin:0 0 14px; color:#66717d; font-size:12px; line-height:19px;">Existing promotional compositions based on emulator captures, shown at a smaller web size. Watch housings are illustrative. Classic panels include both Dial marks settings; layouts and settings vary.</p>
+                <p style="margin:0;"><a href="#join" style="color:#265b63; font-weight:700; text-decoration:underline;">Ready to try them? Request group membership</a></p>
+              </section>
               <p style="margin:0 0 5px;">Thank you,</p>
               <p style="margin:0;"><a href="https://github.com/mmaric27" style="color:#214b50; font-size:20px; line-height:28px; font-weight:700; text-decoration:none;">mark.om</a></p>
             </td>
